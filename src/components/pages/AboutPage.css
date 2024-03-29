@@ -1,0 +1,44 @@
+.main__aboutpage_description {
+    padding: 0 15rem;
+    margin: 18rem 0;
+}
+
+.about-me__description {
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
+
+.about-me__heading_underline-1 {
+    color: #64FFDA;
+    max-width: 12rem;
+    margin: 0;
+    border: 1px solid #64FFDA;
+}
+
+.about-me__heading_underline-2 {
+    color: #64FFDA;
+    max-width: 14rem;
+    margin: 2px 0;
+    border: 1px solid #64FFDA;
+}
+
+.about__me-flex_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me__detail-description {
+    color: #CCD6F6;
+    text-align: justify;
+    width: 40rem
+    ;
+}
+
+.owner__photo {
+    color: #64FFDA;
+}
+
+/* .about-me__heading_underline-2 {
+    max-width: 10rem;
+} */

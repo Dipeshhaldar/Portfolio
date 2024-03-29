@@ -1,0 +1,59 @@
+.main__homepage_description {
+    padding: 0 15rem;
+}
+
+.hello_world {
+    color: #64FFDA;
+    padding-top: 10rem;
+    font-size: 1rem;
+    font-family: Nunito;
+    letter-spacing: 2px;
+}
+
+.owner__name {
+    color: #CCD6F6;
+    font-size: 3.5rem;
+    font-weight: 100;
+    /* font-family: League; */
+    font-weight: 600;
+    margin: 0;
+}
+
+.owner__description {
+    color: #8892B0;
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.owner__detail__description {
+    color: #8892B0;
+    padding: 34px 0;
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: Jost;
+    line-height: 1.4rem;
+}
+
+.college__name__link {
+    color: #64FFDA;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-me__button_mainpage {
+    border: 1px solid #64FFDA;
+    border-radius: 4px;
+    color: #64FFDA;
+    font-size: 1.4rem;
+    font-family: Nunito;
+    padding: 1rem 2.4rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.contact-me__button_mainpage:hover,
+.contact-me__button_mainpage:active {
+    background-color: #d3f5ed26;
+}
