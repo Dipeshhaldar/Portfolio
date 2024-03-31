@@ -1,4 +1,5 @@
 import AboutMe from "./pages/AboutMe";
+import Experience from "./pages/Experience";
 import MainPage from "./pages/MainPage";
 
 export default function HomePage() {
@@ -6,6 +7,7 @@ export default function HomePage() {
         <>
         <MainPage />
         <AboutMe />
+        <Experience />
         </>
     );
 }

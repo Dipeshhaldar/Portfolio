@@ -1,0 +1,133 @@
+.experience__page__main__content {
+    padding: 0 15rem;
+    margin-top: 18rem;
+}
+
+.experience__page__main-heading {
+    color: #CCD6F6;
+    margin-bottom: 4px;
+}
+
+.experience__page__heading__underline-1 {
+    border-top: 1px solid #64FFDA;
+    max-width: 22rem;
+    margin: 0;
+}
+
+.experience__page__heading__underline-2 {
+    border-top: 1px solid #64FFDA;
+    max-width: 30rem;
+    margin: 0;
+    margin-top: 4px;
+}
+
+.experience__page__flex__container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.experience__page__styled__button__flex__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience__page__styled__button {
+    border: 0px transparent;
+    border-left: 2px solid rgb(23, 42, 69);
+    color: rgb(136, 146, 176);
+    font-size: 1rem;
+    font-family: Nunito;
+    padding: 1rem 2.4rem;
+    max-width: 30rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.experience__page__styled__button:hover,
+.experience__page__styled__button:active {
+    background-color: rgb(23, 42, 69);
+    border-left:2px solid #64FFDA;
+}
+
+.experience__page__styled__button.active {
+    background-color: rgb(23, 42, 69);
+    color: #64FFDA;
+    border-left:2px solid #64FFDA;
+}
+
+.experience__page__selected__button__description {
+    color: #64FFDA;
+    width: 40rem;
+    max-width: 40rem;
+    padding-left: 24px;
+    margin: 0;
+}
+
+.experience__page__selected__button__description__label {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 1;
+    color: #CCD6F6;
+}
+
+.experience__page__selected__button__description__label-customize {
+    color: #64FFDA;
+}
+
+.experience__page__selected__button__description__period {
+    color: rgb(136, 146, 176);
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.experience__page__selected__button__description__description {
+    padding: 0;
+    list-style: none;
+    line-height: 34px;
+    color: rgb(136, 146, 176);
+}
+
+.li_flex_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.experience__page__right-arrow {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.8rem;
+    margin-top: 0.7rem;
+}
+
+.experience__page__selected__description {
+    margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .experience__page__main__content {
+        padding: 0 1.5rem;
+        margin-top: 14rem;
+    }
+
+    .experience__page__main-heading {
+        font-size: 24px;
+    }
+
+    .experience__page__flex__container {
+        flex-direction: column;
+    }
+
+    .experience__page__styled__button__flex__container {
+        flex-direction: row;
+    }
+
+    .experience__page__styled__button {
+        width: 30rem;
+    }
+
+    .experience__page__selected__button__description {
+        max-width: 18rem;
+    }
+}
