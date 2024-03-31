@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import Logo from '../../public/Logo.png';
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/" className="logo-link" onClick={closeSidebar}>
-            <img src="/HomePage/TechnoLogo2.png" alt="Logo" width="160" height="80" />
+            <img src={Logo} alt="Logo" />
           </Link>
         </div>
         <div className="navbar-items">

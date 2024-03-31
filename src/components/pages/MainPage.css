@@ -34,6 +34,7 @@
     font-size: 1.1rem;
     font-family: Jost;
     line-height: 1.4rem;
+    max-width: 30rem;
 }
 
 .college__name__link {
@@ -56,4 +57,93 @@
 .contact-me__button_mainpage:hover,
 .contact-me__button_mainpage:active {
     background-color: #d3f5ed26;
+}
+
+@media screen and (max-width: 980px) {
+    .main__homepage_description {
+        padding: 0 3rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+
+    .main__homepage_description {
+        padding: 0 5rem;
+    }
+
+    .hello_world {
+        padding-top: 20rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__homepage_description {
+        padding: 0 2.4rem;
+    }
+
+    .hello_world {
+        font-size: 0.8rem;
+        padding-top: 20rem;
+    }
+
+    .owner__name {
+        font-size: 3.2rem;
+        padding-bottom: 10px;
+    }
+
+    .owner__description {
+        font-size: 3.2rem;
+    }
+
+    .owner__detail__description {
+        margin-top: 0.8rem;
+        font-size: 20px;
+        max-width: 34rem;
+    }
+
+    .contact-me__button_mainpage {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main__homepage_description {
+        padding: 0 1.5rem;
+    }
+
+    .hello_world {
+        font-size: 0.8rem;
+        padding-top: 7rem;
+    }
+
+    .owner__name {
+        font-size: 2.8rem;
+    }
+
+    .owner__description {
+        font-size: 2.8rem;
+    }
+
+    .owner__detail__description {
+        margin-top: 0.8rem;
+        font-size: 14px;
+    }
+
+    .contact-me__button_mainpage {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .owner__name {
+        font-size: 2.2rem;
+    }
+
+    .owner__description {
+        font-size: 2.2rem;
+    }
 }
