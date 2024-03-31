@@ -111,6 +111,7 @@
 @media screen and (max-width: 480px) {
     .about-me__page_content {
         padding: 0 1.5rem;
+        margin-top: 14rem;
     }
 
     .about-me__heading {
@@ -128,6 +129,10 @@
 
     .about-me__flex-container {
         flex-direction: column;
+    }
+
+    .about_me__skills__list {
+        max-width: 14rem;
     }
 
     .about-me__owner__photo {
