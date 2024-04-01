@@ -1,11 +1,12 @@
+// Navbar.jsx
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { NavLink, Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
@@ -15,71 +16,59 @@ const Navbar = () => {
     setShowSidebar(false);
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offsetTop = section.offsetTop - 100; // Adjust this value as needed
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+      navigate(`#${sectionId}`);
+    }
+    closeSidebar();
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to="/" className="logo-link" onClick={closeSidebar}>
+          <Link to="/" className="logo-link" onClick={scrollToTop}>
             <img src="/Logo.png" alt="Logo" />
           </Link>
         </div>
         <div className="navbar-items">
-          {/* <NavLink
-            to="/about"
+          <button
             className="navbar-item"
-            style={{
-              borderBottom:
-                location.pathname === "/about" ? "2px solid white" : "none",
-            }}
-            onClick={closeSidebar}
-          > */}
-            <ScrollLink
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70} // Adjust this offset as needed
-              duration={500}
-              className="navbar-item"
-              onClick={closeSidebar}
-            >
-              About
-            </ScrollLink>
-          {/* </NavLink> */}
-          <NavLink
-            to="/experience"
+            onClick={() => scrollToSection("about")}
+          >
+            About
+          </button>
+          <button
             className="navbar-item"
-            style={{
-              borderBottom:
-                location.pathname === "/experience"
-                  ? "2px solid white"
-                  : "none",
-            }}
-            onClick={closeSidebar}
+            onClick={() => scrollToSection("experience")}
           >
             Experience
-          </NavLink>
-          <NavLink
-            to="/projects"
+          </button>
+          <button
             className="navbar-item"
-            style={{
-              borderBottom:
-                location.pathname === "/projects" ? "2px solid white" : "none",
-            }}
-            onClick={closeSidebar}
+            onClick={() => scrollToSection("projects")}
           >
             Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
+          </button>
+          <button
             className="navbar-item"
-            style={{
-              borderBottom:
-                location.pathname === "/contact" ? "2px solid white" : "none",
-            }}
-            onClick={closeSidebar}
+            onClick={() => scrollToSection("contact")}
           >
             Contact
-          </NavLink>
+          </button>
         </div>
         <div className="navbar-icon" onClick={toggleSidebar}>
           {showSidebar ? <FaTimes /> : <FaBars />}
@@ -88,44 +77,30 @@ const Navbar = () => {
       {showSidebar && (
         <div className="sidebar">
           <div className="sidebar-items">
-            {/* <NavLink
-              to="/about"
+            <button
               className="sidebar-item"
-              onClick={closeSidebar}
-            > */}
-              <ScrollLink
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-70} // Adjust this offset as needed
-                duration={500}
-                className="navbar-item"
-                onClick={closeSidebar}
-              >
-                About
-              </ScrollLink>
-            {/* </NavLink> */}
-            <NavLink
-              to="/experience"
+              onClick={() => scrollToSection("about")}
+            >
+              About
+            </button>
+            <button
               className="sidebar-item"
-              onClick={closeSidebar}
+              onClick={() => scrollToSection("experience")}
             >
               Experience
-            </NavLink>
-            <NavLink
-              to="/projects"
+            </button>
+            <button
               className="sidebar-item"
-              onClick={closeSidebar}
+              onClick={() => scrollToSection("projects")}
             >
               Projects
-            </NavLink>
-            <NavLink
-              to="/contact"
+            </button>
+            <button
               className="sidebar-item"
-              onClick={closeSidebar}
+              onClick={() => scrollToSection("contact")}
             >
               Contact
-            </NavLink>
+            </button>
           </div>
         </div>
       )}

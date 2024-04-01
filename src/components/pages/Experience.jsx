@@ -90,6 +90,7 @@ export default function Experience() {
 
   return (
     <>
+    <div id="experience">
       <div className="experience__page__main__content">
         <h1 className="experience__page__main-heading">Where I've Worked</h1>
         <hr className="experience__page__heading__underline-1" />
@@ -109,7 +110,7 @@ export default function Experience() {
             ))}
           </div>
           <div>
-            <p className="experience__page__selected__button__description">
+            <section className="experience__page__selected__button__description">
               <h1 className="experience__page__selected__button__description__label">
                 {experienceData[selectedButton].label_1}
                 <span className="experience__page__selected__button__description__label-customize">{experienceData[selectedButton].label_2}</span>
@@ -120,9 +121,10 @@ export default function Experience() {
                 <li className="li_flex_container"><img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" /><p className="experience__page__selected__description">{experienceData[selectedButton].description_2}</p></li>
                 <li className="li_flex_container"><img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" /><p className="experience__page__selected__description">{experienceData[selectedButton].description_3}</p></li>
               </ul>
-            </p>
+            </section>
           </div>
         </main>
+      </div>
       </div>
     </>
   );

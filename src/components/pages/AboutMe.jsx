@@ -8,7 +8,7 @@ export default function AboutMe() {
         <hr className='about-me__heading__underline-1' />
         <hr className='about-me__heading__underline-2' />
         <main className='about-me__flex-container'>
-            <body>
+            <section>
           <p className='about-me__owner__description'>
             Hello! I am Dipesh Haldar, a spirited student developer carving a
             niche in the tech cosmos. With React, I sculpt captivating web
@@ -28,7 +28,7 @@ export default function AboutMe() {
               contribute to the ever-expanding tapestry of technological
               marvels.
           </p>
-          <p className="about_me__skills__list">
+          <section className="about_me__skills__list">
               <ul className="about_me__skills__list-items">
                 <li><img src="/Right_Arrow.png" className="about_me__skills__list__right-arrow" alt="right_arrow" />React</li>
                 <li><img src="/Right_Arrow.png" className="about_me__skills__list__right-arrow" alt="right_arrow" />Django</li>
@@ -41,8 +41,8 @@ export default function AboutMe() {
                 <li><img src="/Right_Arrow.png" className="about_me__skills__list__right-arrow" alt="right_arrow" />C</li>
                 <li><img src="/Right_Arrow.png" className="about_me__skills__list__right-arrow" alt="right_arrow" />Nodejs</li>
               </ul>
-            </p>
-          </body>
+            </section>
+          </section>
           <div>
             <img className='about-me__owner__photo' src="/Dipesh.jpg" alt="Dipesh" />
             <div className='about-me__owner__photo__background__border'></div>
