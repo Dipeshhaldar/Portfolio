@@ -124,7 +124,8 @@
     }
 
     .experience__page__styled__button {
-        width: 30rem;
+        padding: 0;
+        max-width: 40rem;
     }
 
     .experience__page__selected__button__description {

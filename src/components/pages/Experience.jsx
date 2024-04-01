@@ -71,17 +71,17 @@ export default function Experience() {
       description_3:
         "Building a community where every student can thrive in tech and build something together.",
     },
-    {
-      name: "Codemate IT Services",
-      label_1: "Frontend Developer",
-      label_2: " @ Codemate IT Services",
-      period: "Sept 2023 - Present",
-      description_1: "Google Developers Student Club SBJITMR.",
-      description_2:
-        "Responsible to organize Andriod Study Jams to enhance the tech culture",
-      description_3:
-        "Building a community where every student can thrive in tech and build something together.",
-    },
+    // {
+    //   name: "Codemate IT Services",
+    //   label_1: "Frontend Developer",
+    //   label_2: " @ Codemate IT Services",
+    //   period: "Sept 2023 - Present",
+    //   description_1: "Google Developers Student Club SBJITMR.",
+    //   description_2:
+    //     "Responsible to organize Andriod Study Jams to enhance the tech culture",
+    //   description_3:
+    //     "Building a community where every student can thrive in tech and build something together.",
+    // },
   ];
 
   const handleButtonClick = (index) => {
