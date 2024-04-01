@@ -71,17 +71,28 @@ export default function Experience() {
       description_3:
         "Building a community where every student can thrive in tech and build something together.",
     },
-    // {
-    //   name: "Codemate IT Services",
-    //   label_1: "Frontend Developer",
-    //   label_2: " @ Codemate IT Services",
-    //   period: "Sept 2023 - Present",
-    //   description_1: "Google Developers Student Club SBJITMR.",
-    //   description_2:
-    //     "Responsible to organize Andriod Study Jams to enhance the tech culture",
-    //   description_3:
-    //     "Building a community where every student can thrive in tech and build something together.",
-    // },
+    {
+      name: "TARS Technologies",
+      label_1: "Full Stack Developer",
+      label_2: " @ TARS Technologies",
+      period: "Aug 2023 - Oct 2023",
+      description_1: "It is an IT based Company",
+      description_2:
+        "Responsible to organize Andriod Study Jams to enhance the tech culture",
+      description_3:
+        "Building a community where every student can thrive in tech and build something together.",
+    },
+    {
+      name: "Codemate IT Services",
+      label_1: "Frontend Developer",
+      label_2: " @ Codemate IT Services",
+      period: "Sept 2023 - Present",
+      description_1: "Google Developers Student Club SBJITMR.",
+      description_2:
+        "Responsible to organize Andriod Study Jams to enhance the tech culture",
+      description_3:
+        "Building a community where every student can thrive in tech and build something together.",
+    },
   ];
 
   const handleButtonClick = (index) => {

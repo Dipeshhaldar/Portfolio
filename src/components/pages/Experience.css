@@ -105,6 +105,26 @@
     margin: 0;
 }
 
+@media screen and (max-width: 980px) {
+    .experience__page__main__content {
+        padding: 0 3rem;
+    }
+
+    .experience__page__styled__button {
+        padding: 1rem 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .experience__page__main__content {
+        padding: 0 2.4rem;
+    }
+
+    .experience__page__selected__button__description {
+        max-width: 28rem;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .experience__page__main__content {
         padding: 0 1.5rem;
@@ -115,20 +135,33 @@
         font-size: 24px;
     }
 
+    .experience__page__heading__underline-1 {
+        max-width: 17rem;
+    }
+
+    .experience__page__heading__underline-2 {
+        max-width: 20rem;
+    }
+
     .experience__page__flex__container {
         flex-direction: column;
     }
 
     .experience__page__styled__button__flex__container {
         flex-direction: row;
+        box-sizing: content-box;
+        width: auto;
+        overflow-x: scroll;
     }
 
     .experience__page__styled__button {
-        padding: 0;
-        max-width: 40rem;
+        padding: 10px 20px;
+        white-space: nowrap;
     }
 
     .experience__page__selected__button__description {
         max-width: 18rem;
+        padding-top: 24px;
+        padding-right: 20px;
     }
 }
