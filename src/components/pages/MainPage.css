@@ -59,6 +59,12 @@
     background-color: #d3f5ed26;
 }
 
+@media screen and (max-width: 1200px) {
+    .main__homepage_description {
+        padding: 0 10rem;
+    }
+}
+
 @media screen and (max-width: 980px) {
     .main__homepage_description {
         padding: 0 3rem;

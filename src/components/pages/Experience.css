@@ -105,6 +105,16 @@
     margin: 0;
 }
 
+@media screen and (max-width: 1200px) {
+    .experience__page__main__content {
+        padding: 0 10rem;
+    }
+
+    .experience__page__styled__button {
+        white-space: nowrap;
+    }
+}
+
 @media screen and (max-width: 980px) {
     .experience__page__main__content {
         padding: 0 3rem;

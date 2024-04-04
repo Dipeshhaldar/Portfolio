@@ -72,6 +72,16 @@
     filter: grayscale(0);
 }
 
+@media screen and (max-width: 1200px) {
+    .about-me__page_content {
+        padding: 0 10rem;
+    }
+
+    .about-me__owner__description {
+        max-width: 24rem;
+    }
+}
+
 @media screen and (max-width: 980px) {
     .about-me__page_content {
         padding: 0 3rem;
