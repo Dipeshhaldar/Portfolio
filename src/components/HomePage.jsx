@@ -1,6 +1,7 @@
 import AboutMe from "./pages/AboutMe";
 import Experience from "./pages/Experience";
 import MainPage from "./pages/MainPage";
+import Projects from "./pages/Projects";
 
 export default function HomePage() {
     return (
@@ -8,6 +9,7 @@ export default function HomePage() {
         <MainPage />
         <AboutMe />
         <Experience />
+        <Projects />
         </>
     );
 }

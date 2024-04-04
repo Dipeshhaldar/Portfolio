@@ -1,46 +1,3 @@
-// import React, { useState } from "react";
-// import "./Experience.css";
-
-// const Experience = () => {
-//   const [selectedButton, setSelectedButton] = useState(null);
-
-//   const buttons = [
-//     { id: 1, label: "Button 1", description: "Description for Button 1" },
-//     { id: 2, label: "Button 2", description: "Description for Button 2" },
-//     { id: 3, label: "Button 3", description: "Description for Button 3" }
-//   ];
-
-//   const handleButtonClick = (button) => {
-//     setSelectedButton(button);
-//   };
-
-//   return (
-//     <div className="experience-container">
-//       <div className="experience-buttons">
-//         {buttons.map((button) => (
-//           <button
-//             key={button.id}
-//             className={`experience-button ${selectedButton === button.id && "selected"}`}
-//             onClick={() => handleButtonClick(button.id)}
-//           >
-//             {button.label}
-//           </button>
-//         ))}
-//       </div>
-//       <div className="experience-description">
-//         {selectedButton && (
-//           <div className="description-content">
-//             <h2>{buttons.find(button => button.id === selectedButton).label}</h2>
-//             <p>{buttons.find(button => button.id === selectedButton).description}</p>
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Experience;
-
 import React, { useState } from "react";
 import "./Experience.css";
 
@@ -66,17 +23,6 @@ export default function Experience() {
       label_2: " @ Codemate IT Services",
       period: "Sept 2023 - Present",
       description_1: "Google Developers Student Club SBJITMR.",
-      description_2:
-        "Responsible to organize Andriod Study Jams to enhance the tech culture",
-      description_3:
-        "Building a community where every student can thrive in tech and build something together.",
-    },
-    {
-      name: "TARS Technologies",
-      label_1: "Full Stack Developer",
-      label_2: " @ TARS Technologies",
-      period: "Aug 2023 - Oct 2023",
-      description_1: "It is an IT based Company",
       description_2:
         "Responsible to organize Andriod Study Jams to enhance the tech culture",
       description_3:

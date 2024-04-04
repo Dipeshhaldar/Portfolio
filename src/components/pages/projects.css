@@ -1,0 +1,131 @@
+.projects__main__content__section {
+    padding: 0 15rem;
+    margin-top: 18rem;
+}
+
+.projects__main__main__heading {
+    color: #CCD6F6;
+    margin-bottom: 4px;
+}
+
+.projects__section__heading__underline-1 {
+    border-top: 1px solid #64FFDA;
+    max-width: 10rem;
+    margin: 0;
+}
+
+.projects__section__heading__underline-2 {
+    border-top: 1px solid #64FFDA;
+    max-width: 14rem;
+    margin: 0;
+    margin-top: 4px;
+}
+
+.projects__section__projectlist {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project__section__projectlist__card {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-color: #8892B0;
+    text-decoration: none;
+}
+
+.project__section__card__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.project__section__card__child-1 {
+    margin-bottom: 34px;
+}
+
+.project__section__card__child-1__Links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project__section__card__child-1__Links__Website {
+    width: 44px;
+    height: 44px;
+}
+
+.project__section__card__child-1__Links__Github img {
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+}
+
+.project__section__card__child-1__description__p-1 {
+    color: #CCD6F6;
+    font-size: 20px;
+}
+
+.project__section__card__child-1__p-2 {
+    color: #CCD6F6;
+    font-size: 16px;
+}
+
+.project__section__card__child-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project__section__card__child-2 span {
+    padding-right: 10px;
+    color: #CCD6F6;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 1140px) {
+    .project__section__projectlist__card {
+        width: 840px;
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects__main__content__section {
+        padding: 0 1.5rem;
+        margin-top: 18rem;
+    }
+    
+    .projects__main__main__heading {
+        color: #CCD6F6;
+        margin-bottom: 4px;
+        font-size: 24px;
+    }
+
+    .projects__section__heading__underline-1 {
+        max-width: 10rem;
+    }
+
+    .projects__section__heading__underline-2 {
+        max-width: 14rem;
+        margin-bottom: 2rem;
+    }
+
+    .project__section__card__child-1 {
+        margin-bottom: 24px;
+    }
+}
+
+
