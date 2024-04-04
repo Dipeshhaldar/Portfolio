@@ -1,7 +1,6 @@
 import React from "react";
 import "./Projects.css";
 
-// Sample array of project details
 const projectsData = [
   {
     title: "Project 1",
@@ -62,14 +61,13 @@ const projectsData = [
     ],
     websiteLink: "https://example.com",
     githubLink: "https://github.com/example",
-  },
-
-  // Add more project objects as needed
+  }
 ];
 
 export default function Projects() {
   return (
-    <div className="projects__main__content__section">
+    <>
+    <div id="projects" className="projects__main__content__section">
       <h1 className="projects__main__main__heading">Projects</h1>
       <hr className="projects__section__heading__underline-1" />
       <hr className="projects__section__heading__underline-2" />
@@ -114,5 +112,6 @@ export default function Projects() {
         ))}
       </div>
     </div>
+    </>
   );
 }
