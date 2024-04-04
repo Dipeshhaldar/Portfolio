@@ -115,6 +115,16 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .experience__page__main__content {
+        padding: 0 8rem;
+    }
+
+    .experience__page__selected__button__description {
+        max-width: 30rem;
+    }
+}
+
 @media screen and (max-width: 980px) {
     .experience__page__main__content {
         padding: 0 3rem;
@@ -122,6 +132,10 @@
 
     .experience__page__styled__button {
         padding: 1rem 14px;
+    }
+
+    .experience__page__selected__button__description {
+        max-width: 30rem;
     }
 }
 

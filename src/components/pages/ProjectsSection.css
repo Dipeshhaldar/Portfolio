@@ -50,7 +50,7 @@
 }
 
 .project__section__card__child-1 {
-    margin-bottom: 34px;
+    margin-bottom: 30px;
 }
 
 .project__section__card__child-1__Links {
@@ -106,10 +106,20 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .projects__main__content__section {
+        padding: 0 8rem;
+    }
+
+    .projects__section__projectlist {
+        padding-top: 34px;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .projects__main__content__section {
         padding: 0 1.5rem;
-        margin-top: 18rem;
+        margin-top: 14rem;
     }
     
     .projects__main__main__heading {
@@ -119,16 +129,21 @@
     }
 
     .projects__section__heading__underline-1 {
-        max-width: 10rem;
+        max-width: 8rem;
     }
 
     .projects__section__heading__underline-2 {
-        max-width: 14rem;
+        max-width: 10rem;
         margin-bottom: 2rem;
     }
 
+    .projects__section__projectlist {
+        justify-content: center;
+        align-items: center;
+    }
+
     .project__section__card__child-1 {
-        margin-bottom: 24px;
+        margin-bottom: 8px;
     }
 }
 

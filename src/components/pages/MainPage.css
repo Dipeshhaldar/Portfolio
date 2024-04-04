@@ -65,6 +65,12 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .main__homepage_description {
+        padding: 0 8rem;
+    }
+}
+
 @media screen and (max-width: 980px) {
     .main__homepage_description {
         padding: 0 3rem;
@@ -79,6 +85,25 @@
 
     .hello_world {
         padding-top: 20rem;
+    }
+}
+
+@media screen and (max-width: 778px) {
+    .hello_world {
+        font-size: 14px;
+        padding-top: 12rem;
+    }
+
+    .owner__name {
+        font-size: 44px;
+    }
+
+    .owner__description {
+        font-size: 44px;
+    }
+
+    .owner__detail__description {
+        font-size: 18px;
     }
 }
 
