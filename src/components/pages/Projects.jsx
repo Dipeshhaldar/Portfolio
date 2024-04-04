@@ -1,4 +1,4 @@
-import './Projects.css';
+import './ProjectsSection.css';
 
 const projectsData = [
   {
