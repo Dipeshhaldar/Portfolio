@@ -18,12 +18,12 @@ export default function () {
         <section>
           <div className="contact__me__flex__container">
             <form className="contact__me__form__layout" action="">
-              <input type="text" value="I'm excited to know your name!" />
+              <input type="text" placeholder="I'm excited to know your name!" />
               <div className="contact__me__form__layout__customize">
-                <input type="text" value="Emain ID" />
-                <input type="text" value="Organization's Name (Optional)" />
+                <input type="text" placeholder="Emain ID" />
+                <input type="text" placeholder="Organization's Name (Optional)" />
               </div>
-              <input type="text" value="Tell me about yourself." />
+              <input type="text" placeholder="Tell me about yourself." />
             </form>
             <button className="contact__me__submit__button">Submit</button>
           </div>

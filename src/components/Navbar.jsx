@@ -1,7 +1,7 @@
 // Navbar.jsx
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
