@@ -1,10 +1,12 @@
 import "./Footer.css";
+import { motion } from "framer-motion";
 
 export default function Footer() {
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
 
@@ -54,13 +56,15 @@ export default function Footer() {
             </a>
           </div>
           <div>
-            <a
-              className="footer__back-to-top__link"
-              href="#"
-              onClick={scrollToTop}
-            >
-              Back To Top
-            </a>
+              <motion.a
+                className="footer__back-to-top__link"
+                onClick={scrollToTop}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                Back To Top
+              </motion.a>
           </div>
         </div>
       </main>
