@@ -113,8 +113,10 @@ body {
   .sidebar-item {
     margin-bottom: 10px;
     cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
   }
-  
   
   @media screen and (max-width: 768px) {
     .navbar-items {

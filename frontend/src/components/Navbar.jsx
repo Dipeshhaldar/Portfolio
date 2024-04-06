@@ -1,5 +1,5 @@
-// Navbar.jsx
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
@@ -70,40 +70,61 @@ const Navbar = () => {
             Contact
           </button>
         </div>
-        <div className="navbar-icon" onClick={toggleSidebar}>
+        <motion.div
+          className="navbar-icon"
+          onClick={toggleSidebar}
+          whileHover={{ scale: 1.1 }} // Scale animation on hover
+          whileTap={{ scale: 0.9 }} // Scale animation on tap
+        >
           {showSidebar ? <FaTimes /> : <FaBars />}
-        </div>
+        </motion.div>
       </div>
-      {showSidebar && (
-        <div className="sidebar">
-          <div className="sidebar-items">
-            <button
-              className="sidebar-item"
-              onClick={() => scrollToSection("about")}
+      <AnimatePresence>
+        {showSidebar && (
+          <>
+            <motion.div
+              className="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              onClick={closeSidebar}
+            />
+            <motion.div
+              className="sidebar"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
             >
-              About
-            </button>
-            <button
-              className="sidebar-item"
-              onClick={() => scrollToSection("experience")}
-            >
-              Experience
-            </button>
-            <button
-              className="sidebar-item"
-              onClick={() => scrollToSection("projects")}
-            >
-              Projects
-            </button>
-            <button
-              className="sidebar-item"
-              onClick={() => scrollToSection("contact")}
-            >
-              Contact
-            </button>
-          </div>
-        </div>
-      )}
+              <div className="sidebar-items">
+                <button
+                  className="sidebar-item"
+                  onClick={() => scrollToSection("about")}
+                >
+                  About
+                </button>
+                <button
+                  className="sidebar-item"
+                  onClick={() => scrollToSection("experience")}
+                >
+                  Experience
+                </button>
+                <button
+                  className="sidebar-item"
+                  onClick={() => scrollToSection("projects")}
+                >
+                  Projects
+                </button>
+                <button
+                  className="sidebar-item"
+                  onClick={() => scrollToSection("contact")}
+                >
+                  Contact
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
