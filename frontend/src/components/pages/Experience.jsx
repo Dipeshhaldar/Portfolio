@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./Experience.css";
 
 export default function Experience() {
@@ -47,41 +48,73 @@ export default function Experience() {
 
   return (
     <>
-    <div id="experience">
-      <div className="experience__page__main__content">
-        <h1 className="experience__page__main-heading">Where I've Worked</h1>
-        <hr className="experience__page__heading__underline-1" />
-        <hr className="experience__page__heading__underline-2" />
-        <main className="experience__page__flex__container">
-          <div className="experience__page__styled__button__flex__container">
-            {experienceData.map((item, index) => (
-              <button
-                key={index}
-                className={`experience__page__styled__button ${
-                  selectedButton === index ? "active" : ""
-                }`}
-                onClick={() => handleButtonClick(index)}
+      <div id="experience">
+        <div className="experience__page__main__content">
+          <h1 className="experience__page__main-heading">Where I've Worked</h1>
+          <hr className="experience__page__heading__underline-1" />
+          <hr className="experience__page__heading__underline-2" />
+          <main className="experience__page__flex__container">
+            <div className="experience__page__styled__button__flex__container">
+              {experienceData.map((item, index) => (
+                <motion.button
+                  key={index}
+                  className={`experience__page__styled__button ${
+                    selectedButton === index ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick(index)}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {item.name}
+                </motion.button>
+              ))}
+            </div>
+            <div>
+              <motion.section
+                className="experience__page__selected__button__description"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                {item.name}
-              </button>
-            ))}
-          </div>
-          <div>
-            <section className="experience__page__selected__button__description">
-              <h1 className="experience__page__selected__button__description__label">
-                {experienceData[selectedButton].label_1}
-                <span className="experience__page__selected__button__description__label-customize">{experienceData[selectedButton].label_2}</span>
-              </h1>
-              <h4 className="experience__page__selected__button__description__period">{experienceData[selectedButton].period}</h4>
-              <ul className="experience__page__selected__button__description__description">
-                <li className="li_flex_container"><img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" /><p className="experience__page__selected__description">{experienceData[selectedButton].description_1}</p></li>
-                <li className="li_flex_container"><img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" /><p className="experience__page__selected__description">{experienceData[selectedButton].description_2}</p></li>
-                <li className="li_flex_container"><img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" /><p className="experience__page__selected__description">{experienceData[selectedButton].description_3}</p></li>
-              </ul>
-            </section>
-          </div>
-        </main>
-      </div>
+                <h1 className="experience__page__selected__button__description__label">
+                  {experienceData[selectedButton].label_1}
+                  <span className="experience__page__selected__button__description__label-customize">{experienceData[selectedButton].label_2}</span>
+                </h1>
+                <h4 className="experience__page__selected__button__description__period">{experienceData[selectedButton].period}</h4>
+                <ul className="experience__page__selected__button__description__description">
+                  <motion.li
+                    className="li_flex_container"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" />
+                    <p className="experience__page__selected__description">{experienceData[selectedButton].description_1}</p>
+                  </motion.li>
+                  <motion.li
+                    className="li_flex_container"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.0 }}
+                  >
+                    <img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" />
+                    <p className="experience__page__selected__description">{experienceData[selectedButton].description_2}</p>
+                  </motion.li>
+                  <motion.li
+                    className="li_flex_container"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2 }}
+                  >
+                    <img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" />
+                    <p className="experience__page__selected__description">{experienceData[selectedButton].description_3}</p>
+                  </motion.li>
+                </ul>
+              </motion.section>
+            </div>
+          </main>
+        </div>
       </div>
     </>
   );

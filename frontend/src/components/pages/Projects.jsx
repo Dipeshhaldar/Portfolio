@@ -1,10 +1,13 @@
-import "./ProjectsSection.css";
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import './ProjectsSection.css';
+
 
 const projectsData = [
   {
     title: "DKart An E-CommereceWebsite",
-    description: "Efficient Django eCommerce solution for shopping needs.",
-    techStack: ["Django", "JavaScript", "Python", "HTML", "CSS", "SQLite"],
+    description: "Efficient Django E-Commerce solution for shopping needs with payment gateways integrated.",
+    techStack: ["Django", "JavaScript", "Python", "HTML", "CSS", "SQLite", "PayPal"],
     websiteLink:
       "https://github.com/Dipeshhaldar/DKart-E-Commerece-Website-Using-Django",
     githubLink:
@@ -14,7 +17,7 @@ const projectsData = [
   {
     title: "Timer Challenge Game",
     description:
-      "ReactTimer: Engaging game testing reflexes, timing skills. Can you win?",
+      "ReactTimer: Engaging game testing reflexes, timing skills and accuracy. Can you win?",
     techStack: ["Reactjs", "JavaScript", "Nodejs", "Expressjs", "HTML", "CSS"],
     websiteLink: "https://timer-challenge-game-using-reactjs.vercel.app/",
     githubLink:
@@ -127,64 +130,76 @@ const projectsData = [
 
 export default function Projects() {
   return (
-    <>
-      <div id="projects" className="projects__main__content__section">
-        <h1 className="projects__main__main__heading">Projects</h1>
-        <hr className="projects__section__heading__underline-1" />
-        <hr className="projects__section__heading__underline-2" />
-        <div className="projects__section__projectlist">
-          {projectsData.map((project, index) => (
-            <a
-              key={index}
-              href={project.websiteLink}
-              className="project__section__projectlist__card"
-              target="_blank"
-            >
-              <div className="project__section__card__details">
-                <div className="project__section__card__child-1">
-                  <div className="project__section__card__child-1__Links">
-                    <section>
-                      <img
-                        className="project__section__card__child-1__Links__Website"
-                        src={project.Logo}
-                        alt="Website"
-                      />
-                    </section>
-                    <section className="project__section__card__child-1__Links__Github">
-                      <img
-                        target="_blank"
-                        href={project.websiteLink}
-                        src={project.Logo}
-                        alt="Website"
-                      />
+    <div id="projects" className="projects__main__content__section">
+      <h1 className="projects__main__main__heading">Projects</h1>
+      <hr className="projects__section__heading__underline-1" />
+      <hr className="projects__section__heading__underline-2" />
+      <div className="projects__section__projectlist">
+        {projectsData.map((project, index) => (
+          <ProjectCard key={index} project={project} index={index} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
-                      <img
-                        target="_blank"
-                        href={project.githubLink}
-                        src="/Github-Logo.png"
-                        alt="Github"
-                      />
-                    </section>
-                  </div>
-                  <div className="project__section__card__child-1__description">
-                    <p className="project__section__card__child-1__description__p-1">
-                      {project.title}
-                    </p>
-                    <p className="project__section__card__child-1__p-2">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
-                <div className="project__section__card__child-2">
-                  {project.techStack.map((tech, index) => (
-                    <span key={index}>{tech}</span>
-                  ))}
-                </div>
-              </div>
-            </a>
+function ProjectCard({ project, index }) {
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.5,
+  });
+
+  return (
+    <motion.a
+      ref={ref}
+      href={project.websiteLink}
+      className="project__section__projectlist__card"
+      target="_blank"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="project__section__card__details">
+        <div className="project__section__card__child-1">
+          <div className="project__section__card__child-1__Links">
+            <section>
+              <img
+                className="project__section__card__child-1__Links__Website"
+                src={project.Logo}
+                alt="Website"
+                onClick={() => window.open(project.websiteLink, "_blank")}
+              />
+            </section>
+            <section className="project__section__card__child-1__Links__Github">
+              <img
+                src={project.Logo}
+                alt="Website"
+                onClick={() => window.open(project.websiteLink, "_blank")}
+                style={{ cursor: "pointer" }}
+              />
+              <img
+                src="/Github-Logo.png"
+                alt="Github"
+                onClick={() => window.open(project.githubLink, "_blank")}
+                style={{ cursor: "pointer" }}
+              />
+            </section>
+          </div>
+          <div className="project__section__card__child-1__description">
+            <p className="project__section__card__child-1__description__p-1">
+              {project.title}
+            </p>
+            <p className="project__section__card__child-1__p-2">
+              {project.description}
+            </p>
+          </div>
+        </div>
+        <div className="project__section__card__child-2">
+          {project.techStack.map((tech, index) => (
+            <span key={index}>{tech}</span>
           ))}
         </div>
       </div>
-    </>
+    </motion.a>
   );
 }
