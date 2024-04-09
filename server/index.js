@@ -18,6 +18,6 @@ app.post("/user", (req, res, next) => {
     .catch((err) => res.json(err));
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Database Connected");
 });
