@@ -44,7 +44,7 @@ export default function ContactMe() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/user", {
+      .post("portfolio-backend-tau-blush.vercel.app/user", {
         name,
         email,
         organization,
