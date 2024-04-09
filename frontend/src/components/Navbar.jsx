@@ -69,6 +69,12 @@ const Navbar = () => {
           >
             Contact
           </button>
+          <button
+            className="navbar-item navbar-item__resume-button"
+            onClick={() => scrollToSection("/")}
+          >
+            Resume
+          </button>
         </div>
         <motion.div
           className="navbar-icon"
