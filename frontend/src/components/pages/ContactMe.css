@@ -81,6 +81,20 @@
     margin-top: 14px;
 }
 
+.success-message {
+    padding-top: 24px;
+    text-align: center;
+    font-size: 20px;
+    color: #64FFDA;
+}
+
+.error-message {
+    padding-top: 24px;
+    text-align: center;
+    font-size: 20px;
+    color: red;
+}
+
 @media screen and (max-width: 1240px)  {
     .contact__me__main__section {
         padding: 0 10rem;
@@ -163,5 +177,15 @@
     .contact__me__submit__button {
         font-size: 16px;
         padding: 12px 30px;
+    }
+
+    .success-message {
+        font-size: 14px;
+        color: #64FFDA;
+    }
+
+    .error-message {
+        font-size: 14px;
+        color: red;
     }
 }

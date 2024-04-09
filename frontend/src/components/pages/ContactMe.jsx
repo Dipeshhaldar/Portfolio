@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import axios from "axios";
 import "./ContactMe.css";
 
 export default function ContactMe() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [organization, setOrganization] = useState("");
+  const [description, setDescription] = useState("");
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
@@ -32,6 +39,37 @@ export default function ContactMe() {
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:3000/user", {
+        name,
+        email,
+        organization,
+        description,
+      })
+      .then((result) => {
+        console.log(result);
+        setSubmitMessage("Form submitted successfully");
+        setErrorMessage("");
+        setName("");
+        setEmail("");
+        setOrganization("");
+        setDescription("");
+        setTimeout(() => {
+          setSubmitMessage("");
+        }, 4000); // Hide success message after 4 seconds
+      })
+      .catch((err) => {
+        console.log(err);
+        setErrorMessage("Error occurred while submitting the form");
+        setSubmitMessage("");
+        setTimeout(() => {
+          setErrorMessage("");
+        }, 4000); // Hide error message after 4 seconds
+      });
   };
 
   return (
@@ -77,13 +115,17 @@ export default function ContactMe() {
             initial="hidden"
             animate={controls}
             variants={variants}
+            onSubmit={handleSubmit}
           >
             <motion.input
               type="text"
               placeholder="I'm excited to know your name!"
               autoComplete="off"
               name="username"
+              required
               variants={itemVariants}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             <motion.div
               className="contact__me__form__layout__customize"
@@ -94,7 +136,10 @@ export default function ContactMe() {
                 placeholder="Email ID"
                 autoComplete="off"
                 name="email"
+                required
                 variants={itemVariants}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <motion.input
                 type="text"
@@ -102,13 +147,18 @@ export default function ContactMe() {
                 autoComplete="off"
                 name="organization"
                 variants={itemVariants}
+                value={organization}
+                onChange={(e) => setOrganization(e.target.value)}
               />
             </motion.div>
             <motion.input
               type="text"
               placeholder="Tell me about yourself."
               name="description"
+              required
               variants={itemVariants}
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
             />
             <motion.div
               className="contact__me__submit__button__style"
@@ -121,6 +171,26 @@ export default function ContactMe() {
                 Submit
               </motion.button>
             </motion.div>
+            {submitMessage && (
+              <motion.div
+                className="success-message"
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                {submitMessage}
+              </motion.div>
+            )}
+            {errorMessage && (
+              <motion.div
+                className="error-message"
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                {errorMessage}
+              </motion.div>
+            )}
           </motion.form>
         </div>
       </section>
