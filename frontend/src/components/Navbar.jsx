@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -36,6 +37,11 @@ const Navbar = () => {
     });
   };
 
+  const downloadResume = () => {
+    const resumeUrl = "/Dipesh Haldar Resume.pdf";
+    window.open(resumeUrl, "_blank");
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -71,7 +77,7 @@ const Navbar = () => {
           </button>
           <button
             className="navbar-item navbar-item__resume-button"
-            onClick={() => scrollToSection("/")}
+            onClick={downloadResume}
           >
             Resume
           </button>
@@ -79,7 +85,7 @@ const Navbar = () => {
         <motion.div
           className="navbar-icon"
           onClick={toggleSidebar}
-          whileHover={{ scale: 1.1 }} 
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
           {showSidebar ? <FaTimes /> : <FaBars />}
@@ -125,6 +131,13 @@ const Navbar = () => {
                   onClick={() => scrollToSection("contact")}
                 >
                   Contact
+                </button>
+                <button
+                id="sidebar-item__resume-button"
+                  className="sidebar-item"
+                  onClick={downloadResume}
+                >
+                  Resume
                 </button>
               </div>
             </motion.div>

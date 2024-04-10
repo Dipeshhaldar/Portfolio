@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import "./Experience.css";
 
 export default function Experience() {
-  const [selectedButton, setSelectedButton] = useState(0); // State to track selected button
+  const [selectedButton, setSelectedButton] = useState(0); 
 
-  // Array containing button names and descriptions
+  
   const experienceData = [
     {
       name: "GDSC SBJITMR",
@@ -79,9 +79,13 @@ export default function Experience() {
               >
                 <h1 className="experience__page__selected__button__description__label">
                   {experienceData[selectedButton].label_1}
-                  <span className="experience__page__selected__button__description__label-customize">{experienceData[selectedButton].label_2}</span>
+                  <span className="experience__page__selected__button__description__label-customize">
+                    {experienceData[selectedButton].label_2}
+                  </span>
                 </h1>
-                <h4 className="experience__page__selected__button__description__period">{experienceData[selectedButton].period}</h4>
+                <h4 className="experience__page__selected__button__description__period">
+                  {experienceData[selectedButton].period}
+                </h4>
                 <ul className="experience__page__selected__button__description__description">
                   <motion.li
                     className="li_flex_container"
@@ -89,8 +93,14 @@ export default function Experience() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" />
-                    <p className="experience__page__selected__description">{experienceData[selectedButton].description_1}</p>
+                    <img
+                      src="/Right_Arrow.png"
+                      className="experience__page__right-arrow"
+                      alt="right_arrow"
+                    />
+                    <p className="experience__page__selected__description">
+                      {experienceData[selectedButton].description_1}
+                    </p>
                   </motion.li>
                   <motion.li
                     className="li_flex_container"
@@ -98,8 +108,14 @@ export default function Experience() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.0 }}
                   >
-                    <img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" />
-                    <p className="experience__page__selected__description">{experienceData[selectedButton].description_2}</p>
+                    <img
+                      src="/Right_Arrow.png"
+                      className="experience__page__right-arrow"
+                      alt="right_arrow"
+                    />
+                    <p className="experience__page__selected__description">
+                      {experienceData[selectedButton].description_2}
+                    </p>
                   </motion.li>
                   <motion.li
                     className="li_flex_container"
@@ -107,8 +123,14 @@ export default function Experience() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2 }}
                   >
-                    <img src="/Right_Arrow.png" className="experience__page__right-arrow" alt="right_arrow" />
-                    <p className="experience__page__selected__description">{experienceData[selectedButton].description_3}</p>
+                    <img
+                      src="/Right_Arrow.png"
+                      className="experience__page__right-arrow"
+                      alt="right_arrow"
+                    />
+                    <p className="experience__page__selected__description">
+                      {experienceData[selectedButton].description_3}
+                    </p>
                   </motion.li>
                 </ul>
               </motion.section>

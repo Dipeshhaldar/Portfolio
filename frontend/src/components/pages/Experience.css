@@ -37,7 +37,7 @@
     border: 0px transparent;
     border-left: 2px solid rgb(23, 42, 69);
     color: rgb(136, 146, 176);
-    font-size: 1rem;
+    font-size: 14px;
     font-family: Quicksand;
     padding: 1rem 2.4rem;
     max-width: 30rem;
@@ -61,7 +61,7 @@
     color: #64FFDA;
     width: 40rem;
     max-width: 40rem;
-    padding-left: 24px;
+    padding-left: 20px;
     margin: 0;
     font-family: Quicksand;
 }
