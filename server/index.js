@@ -8,9 +8,17 @@ const dbHOST = process.env.DBHOST;
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ["https://dipeshhaldar.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
 
 mongoose.connect(dbHOST);
+
+app.get("/", (req, res, next) => {
+  res.send("Server Is Running");
+})
 
 app.post("/user", (req, res, next) => {
   EmployeeModel.create(req.body)
