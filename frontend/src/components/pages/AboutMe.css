@@ -31,6 +31,7 @@
     color: #8892B0;
     line-height: 24px;
     max-width: 30rem;
+    font-family: Quicksand;
 }
 
 .about_me__skills__list {
@@ -52,6 +53,7 @@
     padding-left: 0;
     line-height: 2rem;
     font-size: 14px;
+    font-family: Quicksand;
 }
 
 .about-me__owner__photo{
@@ -59,7 +61,6 @@
     height: 350px;
     border-radius: 8px;
     filter: grayscale(1);
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 
 .about-me__owner__photo:hover,

@@ -1,14 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from "react-router-dom";
 import "./MainPage.css";
 
 export default function MainPage() {
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offsetTop = section.offsetTop - 100;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+      navigate(`#${sectionId}`);
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.4 // Adjust this value for desired delay between each element
+        staggerChildren: 0.4 
       }
     }
   };
@@ -19,8 +34,8 @@ export default function MainPage() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8, // Adjust this value for the duration of each element's animation
-        ease: "easeInOut" // Use easing functions for smooth transitions
+        duration: 0.8, 
+        ease: "easeInOut" 
       }
     }
   };
@@ -41,7 +56,7 @@ export default function MainPage() {
         in the realms of Web Development and DevOps.
       </motion.p>
       <motion.p variants={itemVariants}>
-        <button className="contact-me__button_mainpage">Contact Me</button>
+        <button onClick={() => scrollToSection("contact")} className="contact-me__button_mainpage">Contact Me</button>
       </motion.p>
     </motion.div>
   );

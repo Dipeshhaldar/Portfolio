@@ -6,7 +6,7 @@ import './ProjectsSection.css';
 const projectsData = [
   {
     title: "DKart An E-CommereceWebsite",
-    description: "Efficient Django E-Commerce solution for shopping needs with payment gateways integrated.",
+    description: "Efficient Django E-Commerce website with payment gateways integrated.",
     techStack: ["Django", "JavaScript", "Python", "HTML", "CSS", "SQLite", "PayPal"],
     websiteLink:
       "https://github.com/Dipeshhaldar/DKart-E-Commerece-Website-Using-Django",
@@ -55,7 +55,7 @@ const projectsData = [
   {
     title: "Meals Application",
     description:
-      "Dynamic React blog platform: create, share, and engage with captivating content effortlessly and efficiently.",
+      "Dynamic Meals Application platform: where you can search recepies for various foods.",
     techStack: ["Flutter", "Dart", "C++", "Firebase"],
     websiteLink:
       "https://github.com/Dipeshhaldar/Meals-Application-Using-Flutter",
@@ -117,9 +117,9 @@ const projectsData = [
     Logo: "/Website-Logo.png",
   },
   {
-    title: "The-Unconventional-Calculator",
+    title: "The Unconventional Calculator",
     description:
-      "The Unconventional Calculator: Explore unique calculations, customize features, and redefine mathematical experiences with innovative functionalities.",
+      "The Unconventional Calculator: Explore unique calculations and customize features",
     techStack: ["JavaScript", "HTML", "CSS"],
     websiteLink:
       "https://github.com/Dipeshhaldar/The-Unconventional-Calculator",

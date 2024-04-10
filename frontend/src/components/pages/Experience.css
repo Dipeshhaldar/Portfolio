@@ -38,7 +38,7 @@
     border-left: 2px solid rgb(23, 42, 69);
     color: rgb(136, 146, 176);
     font-size: 1rem;
-    font-family: Nunito;
+    font-family: Quicksand;
     padding: 1rem 2.4rem;
     max-width: 30rem;
     background: transparent;
@@ -63,6 +63,7 @@
     max-width: 40rem;
     padding-left: 24px;
     margin: 0;
+    font-family: Quicksand;
 }
 
 .experience__page__selected__button__description__label {
@@ -70,10 +71,12 @@
     font-size: 24px;
     font-weight: 1;
     color: #CCD6F6;
+    font-family: Quicksand;
 }
 
 .experience__page__selected__button__description__label-customize {
     color: #64FFDA;
+    font-family: Quicksand;
 }
 
 .experience__page__selected__button__description__period {
@@ -103,6 +106,7 @@
 
 .experience__page__selected__description {
     margin: 0;
+    font-family: Quicksand;
 }
 
 @media screen and (max-width: 1240px) {

@@ -19,7 +19,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const offsetTop = section.offsetTop - 100; // Adjust this value as needed
+      const offsetTop = section.offsetTop - 100;
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth",
@@ -79,8 +79,8 @@ const Navbar = () => {
         <motion.div
           className="navbar-icon"
           onClick={toggleSidebar}
-          whileHover={{ scale: 1.1 }} // Scale animation on hover
-          whileTap={{ scale: 0.9 }} // Scale animation on tap
+          whileHover={{ scale: 1.1 }} 
+          whileTap={{ scale: 0.9 }}
         >
           {showSidebar ? <FaTimes /> : <FaBars />}
         </motion.div>
