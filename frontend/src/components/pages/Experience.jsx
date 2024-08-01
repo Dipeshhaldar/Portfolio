@@ -8,13 +8,24 @@ export default function Experience() {
   
   const experienceData = [
     {
+      name: "TARS Technologies",
+      label_1: "Android Developer",
+      label_2: " @ TARS Technologies",
+      period: "Sept 2023 - Present",
+      description_1: "I had the opportunity to work on several live projects, which provided me with valuable hands-on experience in mobile application development.",
+      description_2:
+        "Implemented frontend functionalities and features, ensuring cross-browser compatibility and optimization for performance.",
+      description_3:
+        "Responsible to work on projects, assist with daily tasks, and learn about the industry and company culture while gaining hands-on experience in their field of study.",
+    },
+    {
       name: "GDSC SBJITMR",
       label_1: "Flutter Developer",
       label_2: " @ GDSC SBJITMR",
       period: "Sept 2023 - Present",
       description_1: "Google Developers Student Club SBJITMR.",
       description_2:
-        "Responsible to organize Andriod Study Jams to enhance the tech culture",
+        "Responsible to organize Andriod Study Jams to enhance the tech culture.",
       description_3:
         "Building a community where every student can thrive in tech and build something together.",
     },
